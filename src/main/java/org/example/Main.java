@@ -3,15 +3,33 @@ package org.example;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    public static void cekString(String kata) {
+        int uppercase = 0;
+        int lowercase = 0;
+        int angka = 0;
+        int symbol = 0;
+        for (int i = 0; i < kata.length(); i++) {
+            if (Character.isDigit(kata.charAt(i))) {
+                angka++;
+            }
+            else if (Character.isLetter(kata.charAt(i))) {
+                if (Character.isUpperCase(kata.charAt(i))) {
+                    uppercase++;
+                } else if (Character.isLowerCase(kata.charAt(i))) {
+                    lowercase++;
+                }
+            }
+            else {
+                symbol++;
+            }
         }
+        System.out.println("uppercase : " + uppercase);
+        System.out.println("lowercase : " + lowercase);
+        System.out.println("angka : " + angka);
+        System.out.println("symbol : " + symbol);
+    }
+
+    public static void main(String[] args) {
+        cekString("HelloWorldYeah@%$^^#%$111");
     }
 }
