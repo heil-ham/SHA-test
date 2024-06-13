@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -30,6 +32,16 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        cekString("HelloWorldYeah@%$^^#%$111");
+        String pilihan = "";
+        do {
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Masukkan kata : ");
+            String word = scan.nextLine();
+            cekString(word);
+
+            System.out.println("Ingin Mengulangi ? ");
+            System.out.println("Tekan x/X untuk berhenti.");
+            pilihan = scan.nextLine();
+        } while (!pilihan.equals("x") && !pilihan.equals("X"));
     }
 }
