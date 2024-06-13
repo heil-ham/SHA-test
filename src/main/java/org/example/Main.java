@@ -21,6 +21,9 @@ public class Main {
                     lowercase++;
                 }
             }
+            else if (Character.isWhitespace(kata.charAt(i))) {
+                continue;
+            }
             else {
                 symbol++;
             }
