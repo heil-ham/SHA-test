@@ -7,3 +7,5 @@ Jawaban Soal No 1 dan 2
 -	8 % 8 == 0
 -	8 % 4 == 0
 -	8 % 2 == 0
+
+3. Jawaban no 3 ada di source code
